@@ -1,0 +1,12 @@
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '60a0fdf920msh68972d9786b7056p16a89fjsnca2e13235a8f',
+        'X-RapidAPI-Host': 'burgers1.p.rapidapi.com'
+    }
+};
+
+fetch('https://burgers1.p.rapidapi.com/burgers', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
