@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
         background-color: black;
-        position: sticky;
+        z-index: 0;
         top: 0;
     }
     
@@ -111,7 +111,7 @@
     }
     
     #home p {
-        font-size: larger;
+        font-size: 1.2rem;
         justify-content: center;
         align-items: center;
     }
@@ -123,8 +123,8 @@
         display: flex;
         align-items: center;
         border-radius: 60px;
-        padding: 10px 20px;
-        backdrop-filter: blur(4px) saturate(80%);
+        position: relative;
+        z-index: 0;
     }
     
     .search-bar img {
@@ -133,11 +133,13 @@
     
     .search-bar input {
         background: transparent;
+        display: flex;
         flex: 1;
         border: 0;
         outline: none;
         padding: 24px 20px;
         color: palegoldenrod;
+        position: absolute;
     }
     
      ::placeholder {
@@ -150,6 +152,7 @@
         border-radius: 50%;
         height: 60px;
         cursor: pointer;
+        float: right;
     }
     
     .main {
@@ -157,36 +160,32 @@
         flex-direction: column;
         /*border: 1px solid white; */
         align-items: center;
-        position: sticky;
-        top: 30%;
-        right: 10%;
+        z-index: 0;
+        font-size: 1.3em;
+        align-items: center;
     }
     
     div.main {
-        position: sticky;
-    }
-    
-    h1 .headings {
-        font-family: Georgia, Times, 'Times New Roman', serif;
-        font-size: 3rem;
-        text-align: center;
-        margin: 40px 0px;
-    }
-    
-    .headings {
         font-family: Avenir, Georgia, Times, 'Times New Roman', serif;
         font-size: 3rem;
         text-align: center;
         margin: 40px 0px;
     }
     
+    h1.headings {
+        font-family: Avenir, Georgia, Times, 'Times New Roman', serif;
+        font-size: 4rem;
+        text-align: center;
+        margin: 40px 0px;
+    }
+    
     .btn {
         padding: 10px 35px;
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
+        background-color: black;
+        border: none;
+        color: orange;
         outline: none;
-        transition: .6s ease;
+        transition: .8s ease;
     }
     
     .btn:hover {
@@ -201,28 +200,25 @@
         display: flex;
         flex-direction: column;
         background-image: url('burger\ 2.jpeg');
-        height: 1000px;
+        height: 700px;
         justify-content: center;
         align-items: center;
         color: white;
     }
     /* Contact me*/
     
-    #Contact {
+    #ContactUs {
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
         background-image: url('burgerfest2017.webp');
-        color: rgb(200, 191, 191);
-        padding: 20px;
-        align-items: center;
+        align-content: center;
     }
     
     .form {
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
-        align-items: center;
         margin: 20px 0px;
     }
     
@@ -232,7 +228,9 @@
         width: 30%;
         border: none;
         outline: none;
+        display: flex;
         border: 2px solid #000000;
+        align-content: center;
     }
     
     #msg {
@@ -242,17 +240,20 @@
         border: none;
         outline: none;
         border: 2px solid #000000;
+        align-self: center;
     }
     
-    #send {
+    #button {
         width: 60px;
         border: 0;
         border-radius: 50%;
         height: 60px;
         cursor: pointer;
+        border: 3px solid #FFA61F;
     }
     
-    #send:hover {
+    #button:hover {
         cursor: pointer;
         box-shadow: 0 0 10px white;
+        border: 3px solid #FFA61F;
     }

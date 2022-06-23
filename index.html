@@ -26,18 +26,21 @@
     </section>
 
     <section id="Burger_Search">
-        <h1 class="headings">Search here for our World-Class Burger Recipies</h1>
+        <h1 class="headings">Search here for our World-Class Burger Recipes</h1>
         <div class="row">
             <div class="box">
                 <!--Search button comes here just below the description tag for the recipies-->
                 <div class="container">
                     <form action="" class="search-bar">
-                        <input type="text" placeholder="Search for your burgers here" name="q">
+                        <input type="text" placeholder="Search for your burgers here" name="BurgerSearchBar">
                         <button type="submit"><img src ="pngtree-vector-search-icon-png-image_320926.jpeg" alt="search button">
                         </button>
                     </form>
+                    <ul id="burgerList">
+                    </ul>
+                    </ul>
                 </div>
-                <h2 class=" headings ">Name of the Recipie</h2>
+                <h2 class=" headings_Recipe ">Name of the Recipe</h2>
                 <p> From a young age, I have developed an extreme love for technology, whether it is AI, the era of Social Media, web and App development. Apart from that, I am especially interested with how we can use technology to stop social and economic
                     issues in the country, one app at a time</p>
             </div>
@@ -46,19 +49,21 @@
                 <p>This is where all the ingredients will be listed</p>
             </div>
             <div class="box ">
-                <h2 class="headings ">Procedures</h2>
+                <h2 class="headings ">More information about the burger</h2>
                 <p>This is where the steps of making the burger will be listed</p>
+                <btn class="like ">Do you like this burger? Like here <span class="like-glyph ">&#x2661;</span></btn>
             </div>
+
         </div>
     </section>
-    <section id="ContactUs">
-        <h1 class="headings">Contact Us</h1>
+    <section id="ContactUs ">
+        <h1 class="headings ">Contact Us</h1>
         <h3>Feel free to leave a suggestion on how we can make this app better</h3>
         <input type="text " name="name " class="input " placeholder="Enter Your Name ">
         <input type="email " name="email " class="input " placeholder="Enter Your Email Address ">
-        <textarea name="msg " id="msg " cols="30 " rows="10 " placeholder="Enter your Message "></textarea>
-        <button type="submit">
-            <input type="submit">
+        <textarea name="msg " class="input " id=" msg " cols="30 " rows="10 " placeholder="Enter your Message "></textarea>
+        <button class="btn " type="submit "> Submit your Response
+        </button>
     </section>
 </body>
 
