@@ -1,225 +1,230 @@
-/*  html {
-        scroll-behavior: smooth;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        z-index: 0;
-        top: 0;
-    }
-    
-    .navbar ul {
-        display: flex;
-        list-style: none;
-        margin: 20px 0px;
-        background-color: rgb(223, 155, 21);
-        position: sticky;
-    }
-    
-    .navbar ul li {
-        font-family: Avenir;
-        font-size: 1.3rem;
-        font-weight: bold;
-    }
-    
-    .navbar ul li a {
-        text-decoration: none;
-        color: rgb(26, 46, 157);
-        padding: 8px 25px;
-        transition: all.5s ease;
-    }
-    
-    .navbar ul li a:hover {
-        background-color: rgb(249, 227, 227);
-        color: purple;
-        box-shadow: 0 0 10 white;
-    }
-    
-    body {
-        font-family: Avenir;
-        background-color: rgb(255, 183, 0);
-    }
-    
-    ul {
-        font-weight: normal;
-        font-style: normal;
-        font-size: 15px;
-    }
-    /* Home Section*/
-
-
-/* 
-  / #About {
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      padding: 20px;
-      margin-bottom: 50px;
-  }
-  
-  #pic img {
-      width: 575px;
-      height: 400px;
-  }
-  
-  #pic {
-      display: flex;
-  }
-  
-  #intro {
-      display: flex;
-      flex-direction: column;
-      text-align: justify;
-      padding: 10px;
-  }
-  
-  #intro h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-  }
-  /* burger details */
-
-
-/* 
-  #services {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-  }
-  
-  .row {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      box-sizing: border-box;
-  }
-  /* Home */
-
-
-/* 
-  #home ::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: palevioletred;
-      width: 100%;
-      z-index: -1;
-      opacity: .8;
-  }
-  
-  #home p {
-      font-size: 1.2rem;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .search-bar {
-      width: 100%;
-      max-width: 700px;
-      background-color: aliceblue;
-      display: flex;
-      align-items: center;
-      border-radius: 60px;
-      position: relative;
-      z-index: 0;
-  }
-  
-  .search-bar img {
-      width: 25px;
-  }
-  
-  .search-bar input {
-      background: transparent;
-      display: flex;
-      flex: 1;
-      border: 0;
-      outline: none;
-      padding: 24px 20px;
-      color: palegoldenrod;
-      position: absolute;
-  }
-  
-   ::placeholder {
-      color: black;
-  }
-  
-  .search-bar button {
-      width: 60px;
-      border: 0;
-      border-radius: 50%;
-      height: 60px;
-      cursor: pointer;
-      float: right;
-  }
-  
-  .main {
-      display: flex;
-      flex-direction: column;
-      /*border: 1px solid white; */
-
-
-/* 
-  align-items: center;
-  z-index: 0;
-  font-size: 1.3em;
-  align-items: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Avenir;
 }
-div.main {
-    font-family: Avenir, Georgia, Times, 'Times New Roman', serif;
-    font-size: 3rem;
-    text-align: center;
-    margin: 40px 0px;
-}
-h1.headings {
-    font-family: Avenir, Georgia, Times, 'Times New Roman', serif;
-    font-size: 4rem;
-    text-align: center;
-    margin: 40px 0px;
-}
-.btn {
-    padding: 10px 35px;
-    background-color: black;
-    border: none;
-    color: orange;
-    outline: none;
-    transition: .8s ease;
-}
-.btn:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 5px white, 0 0 10px white, 0 015px white;
-    font-weight: bold;
-}
-#home {
+
+
+/*Navigation Bar*/
+
+.navbar {
     display: flex;
-    flex-direction: column;
-    background-image: url('burger\ 2.jpeg');
-    height: 700px;
     justify-content: center;
     align-items: center;
-    color: white;
+    background-color: black;
+    z-index: 0;
+    top: 0;
 }
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+    background-color: rgb(223, 155, 21);
+    position: sticky;
+}
+
+.navbar ul li {
+    font-family: Avenir;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(26, 46, 157);
+    padding: 8px 25px;
+    transition: all.5s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgb(249, 227, 227);
+    color: purple;
+    box-shadow: 0 0 10 white;
+}
+
+body {
+    font-family: Avenir;
+    background-color: rgb(255, 183, 0);
+}
+
+ul {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+}
+
+
+/*Other Components*/
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html {
+    font-family: "Avenir";
+    font-size: 12px;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-image: url("burger\ 2.jpeg");
+}
+
+.container {
+    width: 100%;
+    height: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.brand {
+    text-align: center;
+    font-size: 4rem;
+    color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    align-content: center;
+    background-color: white;
+    display: inline-block;
+}
+
+form ion-icon {
+    width: 8%;
+    font-size: 3rem;
+    margin-bottom: -8px;
+    color: rgb(75, 75, 75);
+    display: inline-block;
+}
+
+.search-result {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-gap: 25px;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(37, 37, 37);
+    padding: 15px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-result .title {
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.view-btn {
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    padding: 10px 0;
+    background-color: #404041;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.item-data {
+    color: whitesmoke;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    line-height: 2rem;
+}
+
+.container.initial .brand {
+    font-size: 7rem;
+}
+
+.container.initial form {
+    max-width: 800px;
+}
+
+.container.initial form input {
+    padding: 20px;
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .search-result {
+        grid-gap: 10px;
+    }
+    .container.initial .brand {
+        font-size: 4rem;
+    }
+    .container.initial form {
+        max-width: 500px;
+    }
+    .container.initial form input {
+        padding: 10px;
+        font-size: 2rem;
+    }
+}
+
 
 /* Contact me*/
 
-
-/* 
 #ContactUs {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-image: url('burgerfest2017.webp');
-    align-content: center;
+    background-color: #FFA61F;
+}
+
+h1.headings {
+    font-size: 5rem;
+    background-color: #FFA61F;
+}
+
+h3 {
+    font-size: 2rem;
+    background-color: #FFA61F
 }
 
 .form {
@@ -230,24 +235,15 @@ h1.headings {
 }
 
 .input {
-    padding: 12px;
-    margin: 15px;
-    width: 30%;
+    padding: 10px;
+    margin: 20px;
+    width: 100%;
     border: none;
     outline: none;
     display: flex;
-    border: 2px solid #000000;
+    border: 0.5px solid #000000;
     align-content: center;
-}
-
-#msg {
-    width: 20%;
-    padding: 10px;
-    margin: 15px;
-    border: none;
-    outline: none;
-    border: 2px solid #000000;
-    align-self: center;
+    background-color: white
 }
 
 #button {
@@ -268,13 +264,11 @@ h1.headings {
 
 /*making the like button*/
 
-
-/* 
 .like__btn {
     padding: 10px 15px;
-    background: #0080ff;
+    background: red;
     font-size: 18px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Avenir, sans-serif;
     border-radius: 5px;
     color: #e8efff;
     outline: none;

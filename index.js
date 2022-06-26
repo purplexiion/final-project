@@ -1,70 +1,75 @@
-//fetching the data from the API and then loading the DOM
 document.addEventListener("DOMContentLoaded", () => {
-        //declaring some variables here that will be used later
-        let burgerList = document.querySelector('burgerList');
-        let searchBar = document.querySelector("searchBar");
-        let burgerLists = [];
-        loadBurgers()
-
-        //making a search bar to load up the burger name
-        searchBar.addEventListener('keyup', (e) => {
-            e.preventDefault()
-            const searchString = e.target.value;
-            const filteredburgerList = burgerLists.filter(burger => {
-                return burger.name.includes(searchString) || burger.ingredients.includes(searchString);
-            });
-            displayBurgerContent(filteredburgerList);
-        });
-
-        //fetching the data from the API
-        fetch('http://localhost:3000/burger')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                document.querySelector('.headings_Recipe') = burger.name
-                document.querySelector('.headings-ingredients') = burger.ingredients
-                document.querySelector('.headings-information') = burger.description
-
-            })
+    const searchForm = document.querySelector("form");
+    const searchResultDiv = document.getElementsByClassName("search-result");
+    const container = document.querySelector(".container");
+    let searchQuery = parseInt("");
 
 
-        //displaying Burger Content in the search tab
-        const displayBurgerContent = (burger) => {
-            const burgerInfo = burger.map((burger) => {
-                    return `
-         <li class="burger">
-         <h2> ${burger.name}</h2>
-         <p>${burger.description}</p>
-         </li>`
-                })
-                .join(' ');
-            burgerList.innerHTML = burgerInfo
+    //making the event listener - functioning
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        searchQuery = e.target.querySelector("input").value;
+        fetchAPI(searchQuery);
+    });
+
+    //loading the API - done
+    async function fetchAPI(id) {
+        let baseUrl = `http://localhost:3000/burger/${id}`;
+        const response = await fetch(baseUrl);
+        let data = await response.json();
+        generateHTML(data);
+    };
+
+
+    //generating the results on the web
+    function generateHTML(results) {
+        container.classList.remove("initial");
+        let generatedHTML = ""
+        newgeneratedHTML =
+            ` 
+        <div class = "item" >
+        <img src = "amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt = "" >
+        <div class = "flex-container" >
+        <h1 class ="title">${results.name}< /h1>
+         <a class = "view-btn" href = " ${results.web}" > Visit their Website here </a> <
+        /div> 
+        <p class = "item-data" > Restaurant Name:${results.restaurant} </p> <
+        /div>
+    `;
+        console.log(results.name);
+        //searchResultDiv.append(generatedHTML);
+        replace(generatedHTML, newgeneratedHTML.toString());
+        return newgeneratedHTML;
+
+    };
+
+    //making the like button(done)
+    let likeBtn = document.getElementsByClassName("like__btn");
+    let likeIcon = document.getElementById("icon");
+    let countNo = document.getElementById("count");
+
+    let clicked = false;
+
+    likeBtn.addEventListener("click", () => {
+        if (!clicked) {
+            clicked = true;
+            likeIcon.innerHTML = `< i class ="fas fa-thumbs-up" > < /i>`;
+            countNo.textContent++;
+        } else {
+            clicked = false;
+            likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
+            countNo.textContent--;
         }
 
+    })
 
-        //making the like button
-        const likeBtn = document.querySelector(".like__btn");
-        let likeIcon = document.querySelector("#icon"),
-            count = document.querySelector("#count");
 
-        let clicked = false;
 
-        likeBtn.addEventListener("click", () => {
-            if (!clicked) {
-                clicked = true;
-                likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
-                count.textContent++;
-            } else {
-                clicked = false;
-                likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
-                count.textContent--;
-            }
-        });
 
-        //making the submit response on the contact us form
-        const form = document.getElementById("form-contact")
+    //making the submit response on the contact us form(done)
+    const form = document.getElementById("form-contact")
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-        });
-    }) //calling the fetch function
+})
