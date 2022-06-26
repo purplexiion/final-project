@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
     <title>Final Project</title>
 </head>
 
@@ -15,7 +14,7 @@
     <nav class="navbar">
         <ul>
             <li><a href="#home"> Home</a></li>
-            <li><a href="#Burger_Search"> Search for Burger</a></li>
+            <li><a href="#brand"> Search for Burger</a></li>
             <li><a href="#ContactUs"> Contact </a></li>
         </ul>
     </nav>
@@ -26,7 +25,7 @@
                 <input type="input" placeholder="Put the Burger Number Here">
                 <ion-icon name="search"></ion-icon>
             </form>
-            <div class="search-result">
+            <div class="results">
                 <div class="item">
                     <img src="amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="">
                     <div class="flex-container">
@@ -34,13 +33,14 @@
                         <a class="view-btn" href="#">Visit their Website here</a>
                     </div>
                     <p class="item-data">Restaurant Name: </p>
+                    <p class="item-data"> Description: </p>
+                    <p class="item-data"> Ingredients: </p>
                 </div>
-
+                <p></p>
                 <!--lIKE Button comes here-->
-                <button class="btn">
-                <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                <span id="count">0</span> Liked this Burger
-                </button>
+                <button class="btn" id="green"><i class="fa-solid fa-thumbs-up"  aria-hidden="true"></i></button>
+                <button class="btn" id="red"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i></button>
+
             </div>
         </div>
     </section>
@@ -58,6 +58,7 @@
 
         </form>
     </section>
+    <script src="/index.js"></script>
 </body>
 
 </html>

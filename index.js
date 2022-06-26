@@ -1,75 +1,75 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const searchForm = document.querySelector("form");
-    const searchResultDiv = document.getElementsByClassName("search-result");
-    const container = document.querySelector(".container");
-    let searchQuery = parseInt("");
+//declaring Variables
+const searchForm = document.querySelector("form");
+const searchResultDiv = document.querySelector(".item");
+const container = document.querySelector(".container");
+let searchQuery = parseInt("");
 
 
-    //making the event listener - functioning
-    searchForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        searchQuery = e.target.querySelector("input").value;
-        fetchAPI(searchQuery);
-    });
+//making the event listener - functioning
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    searchQuery = e.target.querySelector("input").value;
+    fetchAPI(searchQuery);
+});
 
-    //loading the API - done
-    async function fetchAPI(id) {
-        let baseUrl = `http://localhost:3000/burger/${id}`;
-        const response = await fetch(baseUrl);
-        let data = await response.json();
-        generateHTML(data);
-    };
+//loading the API - done
+async function fetchAPI(id) {
+    let baseUrl = `http://localhost:3000/burger/${id}`;
+    const response = await fetch(baseUrl);
+    let data = await response.json();
+    generateHTML(data);
+};
 
 
-    //generating the results on the web
-    function generateHTML(results) {
-        container.classList.remove("initial");
-        let generatedHTML = ""
-        newgeneratedHTML =
-            ` 
-        <div class = "item" >
-        <img src = "amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt = "" >
+//generating the results on the web
+function generateHTML(results) {
+    container.classList.remove("initial");
+    let generatedHTML = "";
+    let result = Object.values(results);
+    console.log(result)
+    for (i = 0; i < result.length; i++) {
+        generatedHTML = `
+             <div class = "item" >
+            <img src = "amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg"alt = "" >
         <div class = "flex-container" >
-        <h1 class ="title">${results.name}< /h1>
-         <a class = "view-btn" href = " ${results.web}" > Visit their Website here </a> <
-        /div> 
-        <p class = "item-data" > Restaurant Name:${results.restaurant} </p> <
-        /div>
-    `;
-        console.log(results.name);
-        //searchResultDiv.append(generatedHTML);
-        replace(generatedHTML, newgeneratedHTML.toString());
-        return newgeneratedHTML;
-
+                    <h1 class = "title">${result[1]} </h1> 
+                    <a class = "view-btn" href = " ${result[3]}" > Visit their Website here</a> 
+                    </div >
+     <p class = "item-data" > Restaurant Name: ${result[2]} </p> 
+     <p class="item-data"> Description: ${result[4]}</p>
+     <p class="item-data"> <br>Ingredients: ${result[5]}</p>
+     <p></p>
+     <div>
+                                `
     };
+    searchResultDiv.innerHTML = generatedHTML;
+}
 
-    //making the like button(done)
-    let likeBtn = document.getElementsByClassName("like__btn");
-    let likeIcon = document.getElementById("icon");
-    let countNo = document.getElementById("count");
+//making the like button(done)
+var btn1 = document.querySelector('#green');
+var btn2 = document.querySelector('#red');
 
-    let clicked = false;
+btn1.addEventListener('click', function() {
 
-    likeBtn.addEventListener("click", () => {
-        if (!clicked) {
-            clicked = true;
-            likeIcon.innerHTML = `< i class ="fas fa-thumbs-up" > < /i>`;
-            countNo.textContent++;
-        } else {
-            clicked = false;
-            likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
-            countNo.textContent--;
-        }
+    if (btn2.classList.contains('red')) {
+        btn2.classList.remove('red');
+    }
+    this.classList.toggle('green');
 
-    })
+});
+
+btn2.addEventListener('click', function() {
+
+    if (btn1.classList.contains('green')) {
+        btn1.classList.remove('green');
+    }
+    this.classList.toggle('red');
+
+});
 
 
-
-
-    //making the submit response on the contact us form(done)
-    const form = document.getElementById("form-contact")
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-    });
-
-})
+//making the submit response on the contact us form(done)
+const form = document.getElementById("form-contact")
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+});

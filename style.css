@@ -131,7 +131,7 @@ form ion-icon {
 .item {
     width: 100%;
     border-radius: 8px;
-    background-color: rgb(37, 37, 37);
+    background-color: orange;
     padding: 15px;
     overflow: hidden;
 }
@@ -173,7 +173,7 @@ form ion-icon {
     color: whitesmoke;
     display: block;
     margin-top: 10px;
-    font-size: 1.4rem;
+    font-size: 2rem;
     letter-spacing: 0.05rem;
     line-height: 2rem;
 }
@@ -264,14 +264,22 @@ h3 {
 
 /*making the like button*/
 
-.like__btn {
-    padding: 10px 15px;
-    background: red;
-    font-size: 18px;
-    font-family: Avenir, sans-serif;
-    border-radius: 5px;
-    color: #e8efff;
-    outline: none;
-    border: none;
+button {
     cursor: pointer;
+    outline: 0;
+    color: #AAA;
+    height: 50px;
+    width: 50px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
 }
