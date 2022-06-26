@@ -13,6 +13,7 @@ HTML,CSS and Javascript
    1. Clone or download the Repository
    2. cd into directory then run `cd Delights Burger App`
   3. Open the repository with your suitable text editor.
+  4. Run the server to get the application fully working
 
 
 #Overview.
@@ -45,4 +46,4 @@ json-server —watch db.json
 The user is permitted to type any number from 0-27 and burger details  for that specific number will pop-up. (this ensures that only one search results comes up to avoid the page being too long)
 
 ## Known Bugs
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/purplexiion/) by including your search query and the expected result.
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/purplexiion/final-project.git) by including your search query and the expected result.
