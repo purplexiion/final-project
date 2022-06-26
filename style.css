@@ -113,7 +113,7 @@ input {
 }
 
 form ion-icon {
-    width: 8%;
+    width: 100%;
     font-size: 3rem;
     margin-bottom: -8px;
     color: rgb(75, 75, 75);
@@ -146,6 +146,7 @@ form ion-icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1.2rem;
 }
 
 .search-result .title {
@@ -153,6 +154,11 @@ form ion-icon {
     margin: 20px 10px 0 0;
     font-size: 1.8rem;
     font-weight: 400;
+}
+
+h1.title {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .view-btn {
@@ -173,9 +179,9 @@ form ion-icon {
     color: whitesmoke;
     display: block;
     margin-top: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.05rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .container.initial .brand {
