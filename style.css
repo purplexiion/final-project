@@ -156,6 +156,14 @@ form ion-icon {
     font-weight: 400;
 }
 
+p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    align-self: center;
+    display: flex;
+}
+
 h1.title {
     font-size: 3rem;
     font-weight: bold;
