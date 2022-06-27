@@ -11,11 +11,23 @@ searchForm.addEventListener("submit", (e) => {
     searchQuery = e.target.querySelector("input").value;
     fetchAPI(searchQuery);
 });
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '60a0fdf920msh68972d9786b7056p16a89fjsnca2e13235a8f',
+        'X-RapidAPI-Host': 'burgers1.p.rapidapi.com'
+    }
+};
+
+fetch('https://burgers1.p.rapidapi.com/burgers', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
 
 //loading the API - done
 async function fetchAPI(id) {
-    let baseUrl = `http://localhost:3000/burger/${id}`;
-    const response = await fetch(baseUrl);
+    let baseUrl = `https://burgers1.p.rapidapi.com/burgers/${id}`;
+    const response = await fetch(baseUrl, options);
     let data = await response.json();
     generateHTML(data);
 };
@@ -64,12 +76,12 @@ btn2.addEventListener('click', function() {
         btn1.classList.remove('green');
     }
     this.classList.toggle('red');
+    form.addEventListener('submit', (event) => {
 
-});
+    });
 
 
-//making the submit response on the contact us form(done)
-const form = document.getElementById("form-contact")
-form.addEventListener('submit', (event) => {
+    //making the submit response on the contact us form(done)
+    const form = document.getElementById("form-contact")
     event.preventDefault();
 });
