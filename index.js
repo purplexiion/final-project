@@ -19,11 +19,6 @@ const options = {
     }
 };
 
-fetch('https://burgers1.p.rapidapi.com/burgers', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-
 //loading the API - done
 async function fetchAPI(id) {
     let baseUrl = `https://burgers1.p.rapidapi.com/burgers/${id}`;
