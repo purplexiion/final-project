@@ -1,3 +1,5 @@
+//Updating the DOM
+
 //declaring Variables
 const searchForm = document.querySelector("form");
 const searchResultDiv = document.querySelector(".item");
