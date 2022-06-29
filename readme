@@ -7,12 +7,18 @@ Technologies used:
 HTML , CSS and Javascript
 
 
+The API Data Used in this MVP:
+ a local hosted API that has been derived from BurgerAPI.
+
 ## Setup Installations Requirements
    To run the application, in your terminal:
 
-   1. Clone or download the Repository
-   2. cd into directory then run `cd Delights Burger App`
+  1. Clone or download the Repository
+  2. cd into directory then run `cd Delights Burger App`
   3. Open the repository with your suitable text editor.
+  4. Run the following command on your terminal `json-server --run db.json`
+  5. Type in any number from 0 - 27 and submit (by pressing enter) to display the results.
+The user is permitted to type any number from 0-27 and burger details  for that specific number will pop-up. (this ensures that only one search results comes up to avoid the page being too long)
 
 
 #Overview.
@@ -22,7 +28,7 @@ The Application has three main parts
 
 ￼
 2. The Burger Details Section - the user sees the details for the burger here after submitting the id. The two boxes, which flash green to indicate approval and red to flash disapproval, are there for the client to give their views on the website they have seen.
-Note: The Burger Picture is constant across all searches for uniformity…the API failed to provide photos for each specific burger
+Note: The Burger Picture should appear once searched.
 
 ￼
 3.The contact us Page - the user is able to leave a comment for feedback on the application.
@@ -34,12 +40,8 @@ Core Features
 3. Will have a contact form at the bottom which will enable people to leave comments in the web app.
 4. Show a like feature to like the recipe.
 
-The API Data Used in this MVP:
- https://burgers1.p.rapidapi.com/burgers - derived from BurgerAPI.
 
-How to use the Application.
-1. Type in any number from 0 - 27 and submit (by pressing enter) to display the results.
-The user is permitted to type any number from 0-27 and burger details  for that specific number will pop-up. (this ensures that only one search results comes up to avoid the page being too long)
+
 
 ## Known Bugs
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/purplexiion/final-project.git) by including your search query and the expected result.

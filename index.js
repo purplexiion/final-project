@@ -54,27 +54,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //making the like button(done)
-    var btn1 = document.querySelector('#green');
-    var btn2 = document.querySelector('#red');
+    ;
 
-    btn1.addEventListener('click', function() {
-
-        if (btn2.classList.contains('red')) {
-            btn2.classList.remove('red');
-        }
-        this.classList.toggle('green');
-
-    });
-
-    btn2.addEventListener('click', function() {
-
-        if (btn1.classList.contains('green')) {
-            btn1.classList.remove('green');
-        }
-        this.classList.toggle('red');
-
-    });
-
+    (function(d, e, s) {
+        if (d.getElementById("likebtn_wjs")) return;
+        a = d.createElement(e);
+        m = d.getElementsByTagName(e)[0];
+        a.async = 1;
+        a.id = "likebtn_wjs";
+        a.src = s;
+        m.parentNode.insertBefore(a, m)
+    })(document, "script", "//w.likebtn.com/js/w/widget.js");
 
     //making the submit response on the contact us form(done)
     const form = document.getElementByClassName("input")
