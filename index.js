@@ -16,17 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //loading the API - done
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '60a0fdf920msh68972d9786b7056p16a89fjsnca2e13235a8f',
-            'X-RapidAPI-Host': 'burgers1.p.rapidapi.com'
-        }
-    };
+
 
     async function fetchAPI(id) {
-        let baseUrl = `https://burgers1.p.rapidapi.com/burgers/${id}`;
-        const response = await fetch(baseUrl, options);
+        let baseUrl = `http://localhost:3000/burger/${id}`;
+        const response = await fetch(baseUrl);
         let data = await response.json();
         generateHTML(data);
     };
@@ -41,19 +35,22 @@ document.addEventListener("DOMContentLoaded", () => {
         for (i = 0; i < result.length; i++) {
             generatedHTML = `
              <div class = "item" >
-            <img src = "amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg"alt = "" >
+            <img src = ${result[4]} = "" >
         <div class = "flex-container" >
                     <h1 class = "title">${result[1]} </h1> 
                     <a class = "view-btn" href = " ${result[3]}" > Visit their Website here</a> 
                     </div >
      <p class = "item-data" > Restaurant Name: ${result[2]} </p> 
-     <p class="item-data"> Description: ${result[4]}</p>
-     <p class="item-data"> <br>Ingredients: ${result[5]}</p>
-     <p></p>
+     <p class="item-data"> Description of the burger: ${result[5]}</p>
+     <p class="item-data"> <br>Ingredients: 
+     <ul class="item-data">
+        <li>${result[6]}</li>
+     </ul></p>
      <div>
                                 `
         };
         searchResultDiv.innerHTML = generatedHTML;
+        console.log(result[3])
     }
 
     //making the like button(done)
@@ -80,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //making the submit response on the contact us form(done)
-    const form = document.getElementById("form-contact")
+    const form = document.getElementByClassName("input")
     form.addEventListener('submit', (event) => {
         event.preventDefault();
     });
