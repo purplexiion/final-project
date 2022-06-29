@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src = ${result[4]} = "" >
         <div class = "flex-container" >
                     <h1 class = "title">${result[1]} </h1> 
-                    <a class = "view-btn" href = " ${result[3]}" > Visit their Website here</a> 
+                    <a class = "view-btn" href = "${result[3]}" >Click this to see more info on their website</a> 
                     </div >
      <p class = "item-data" > Restaurant Name: ${result[2]} </p> 
      <p class="item-data"> Description of the burger: ${result[5]}</p>

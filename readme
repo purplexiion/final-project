@@ -1,13 +1,13 @@
 DELIGHTS SEARCH BURGER APP - A MORINGA SCHOOL PROJECT DESIGNED BY WAMUYU WACHIRA.
 
-#description.
+## description.
 The Delights Burger Search Application allows one to make a search of a burger with an id number. Once input, the user can see details of the burger(apart from the image - the API did not have that) and is able to access an external URL link to get further details about the burger. The data is refreshed with every id put in.
 
-Technologies used:
+## Technologies used:
 HTML , CSS and Javascript
 
 
-The API Data Used in this MVP:
+## The API Data Used in this MVP:
  a local hosted API that has been derived from BurgerAPI.
 
 ## Setup Installations Requirements
@@ -18,10 +18,12 @@ The API Data Used in this MVP:
   3. Open the repository with your suitable text editor.
   4. Run the following command on your terminal `json-server --run db.json`
   5. Type in any number from 0 - 27 and submit (by pressing enter) to display the results.
+
+ ## Results
 The user is permitted to type any number from 0-27 and burger details  for that specific number will pop-up. (this ensures that only one search results comes up to avoid the page being too long)
 
 
-#Overview.
+## Overview.
 The Application has three main parts
 
 1. The Home Page - the user is welcomed to the application and there is a search bar where the user can type in the id of the burger they are looking for.
@@ -34,7 +36,7 @@ Note: The Burger Picture should appear once searched.
 3.The contact us Page - the user is able to leave a comment for feedback on the application.
 ￼
 
-Core Features
+## Core Features
 1. User is able to see the foods being showcased.
 2. There is a welcome section where the user is greeted and is able to see the meals being showcased.
 3. Will have a contact form at the bottom which will enable people to leave comments in the web app.
