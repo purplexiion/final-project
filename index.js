@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //loading the API - done
     async function fetchAPI(id) {
         let baseUrl = `http://localhost:3000/burger/${id}`;
-        mimicServerCall(baseUrl)
         const response = await fetch(baseUrl);
         let data = await response.json();
         generateHTML(data);
@@ -69,17 +68,4 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
     });
 
-    //mimicking the server call
-    function mimicServerCall(baseUrl, config = {}) {
-        return new Promise(function(resolve, reject) {
-            setTimeout(function() {
-                let isRandomFailure = Math.random() < .2
-                if (isRandomFailure) {
-                    reject("Random server error. Try again.");
-                } else {
-                    resolve("Pretend remote server notified of action!");
-                }
-            }, 300);
-        });
-    }
-})
+});
