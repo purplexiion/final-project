@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //mimicking the server call
-    function mimicServerCall(url = "http://localhost:3000/burger", config = {}) {
+    function mimicServerCall(baseUrl, config = {}) {
         return new Promise(function(resolve, reject) {
             setTimeout(function() {
                 let isRandomFailure = Math.random() < .2
