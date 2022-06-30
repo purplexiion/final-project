@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //loading the API - done
     async function fetchAPI(id) {
-        let baseUrl = `http://localhost:3000/burger/${id}`;
+        let baseUrl = `https://guarded-oasis-30062.herokuapp.com/burger/${id}`;
         const response = await fetch(baseUrl);
         let data = await response.json();
         generateHTML(data);
